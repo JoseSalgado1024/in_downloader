@@ -1,4 +1,4 @@
-from helpers import resolve_kwargs, guid
+from helpers import resolve_kwargs, random_id
 from os import path, makedirs
 import cv2
 import numpy as np
@@ -36,7 +36,7 @@ def crop_image(image, **kwargs):
         if defaults['enable']:
             crop_dest_folder = defaults.get('destination_folder')
             crop_fn = '{fn}{fn_mark}.{f}'.format(
-                fn=defaults.get('fn', guid()),
+                fn=defaults.get('fn', random_id()),
                 fn_mark=defaults.get('fn_mark'),
                 f=defaults.get('format', 'png').lower()
             )
@@ -61,11 +61,11 @@ def get_image(image):
         - image.np.ndarray
     """
     if isinstance(image, np.ndarray):
-        print 'Loading from np.array.'
+        print 'Loading Image from np.array.'
         return image
     elif isinstance(image, (str, unicode)):
-        print 'Loading from file.'
-        if not path.exists():
+        print 'Loading image from file.'
+        if not path.exists(image):
             print 'No existe {}.'.format(image)
             return None
         try:
@@ -74,7 +74,7 @@ def get_image(image):
             print 'Fallo carga de imagen {}.'.format(image)
             return None
     elif isinstance(image, list):
-        print 'Loading from list.'
+        print 'Loading images from list.'
         return filter(None, [get_image(img) for img in image])
     else:
         return None
