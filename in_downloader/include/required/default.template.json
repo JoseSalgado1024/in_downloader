@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "url": "",
+  "fn": "",
+  "format": "",
+  "image_destination": "",
+  "cropped_destination": "",
+  "resize_destination": "",
+  "resize": {
+    "enable": true,
+    "resize_x": 50,
+    "resize_y": 50,
+    "fn_mark": "resided"
+  },
+  "crop_image": {
+    "enable": true,
+    "fn_mark": "cropped",
+    "crop_x0": 0,
+    "crop_x1": 0,
+    "crop_y0": 0,
+    "crop_y1": 0
+  }
+}

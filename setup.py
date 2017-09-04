@@ -9,6 +9,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        in_downloader=inet_dowloader.lib.commands:in_downloader
+        in_downloader=in_downloader.include.commands:in_downloader
     ''',
 )

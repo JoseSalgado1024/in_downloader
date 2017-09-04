@@ -1,0 +1,30 @@
+{
+    "filename": "string",
+    "type": "object",
+    "properties": {
+        "suffix": {
+            "type": "string"
+        },
+        "prefix": {
+            "type": "string"
+        },
+        "date": {
+            "type": "boolean"
+        },
+        "date_format": {
+            "type": "string"
+        },
+        "fn": {
+            "type": "string"
+        }
+    },
+    "required":
+      [
+        "suffix",
+        "prefix",
+        "date",
+        "date",
+        "date_format",
+        "fn"
+      ]
+}

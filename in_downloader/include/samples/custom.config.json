@@ -1,0 +1,13 @@
+{
+  "project_name": "faces-image-net",
+  "download_url": "unknown",
+  "project_folder": "faces-imagenet",
+  "filename":
+    {
+        "suffix": "_suf"
+    },
+  "resize":
+    {
+        "enable": false
+    }
+}

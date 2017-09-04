@@ -1,0 +1,35 @@
+{
+  "project_name": "project",
+  "download_url": "unknown",
+  "project_folder": "project",
+  "image_destination": "original",
+  "log_level": "debug",
+  "filename":
+    {
+        "suffix": "",
+        "prefix": "",
+        "date": true,
+        "date_format": "YYYY-MM-DD",
+        "fn": "@prefix@project_name@suffix_@index_@date.@format",
+        "format": ""
+
+    },
+  "resize":
+    {
+        "enable": true,
+        "resize_x": 50,
+        "resize_y": 50,
+        "destination_folder": "resided_images",
+        "fn_mark": "resided"
+    },
+  "crop_image":
+    {
+      "enable": true,
+      "destination_folder": "cropped_images",
+      "fn_mark": "cropped",
+      "crop_x0": 0,
+      "crop_x1": 0,
+      "crop_y0": 0,
+      "crop_y1": 0
+    }
+}
