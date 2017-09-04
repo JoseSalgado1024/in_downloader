@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 
 
-def guid(*args):
+def random_id(*args):
     """
     Generates a universally unique ID.
     Any arguments only create more randomness.
     """
     from time import time
     from random import random
-    import socket
+    from socket import gethostbyname, gethostname
     from hashlib import md5
 
     t = long(time() * 1000)
     r = long(random()*100000000000000000L)
     try:
-        a = socket.gethostbyname(socket.gethostname())
+        a = gethostbyname(gethostname())
     except:
         # if we can't get a network address, just imagine one
         a = random()*100000000000000000L
